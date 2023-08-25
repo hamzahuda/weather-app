@@ -6,7 +6,6 @@ import updateDataDisplayed from "./modules/view";
 function searchSubmitted(event) {
     const searchQuery = document.querySelector(".search-bar").value;
     getWeatherData(searchQuery).then((data) => {
-        console.log(data);
         if (!data.error) {
             let location;
             if (data.location.name === data.location.region) {

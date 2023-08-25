@@ -13,9 +13,12 @@ export default function updateDataDisplayed(
 
     locationNode.textContent = location;
     conditionNode.textContent = condition;
-    const iconImg = new Image();
+
+    iconNode.innerHTML = "";
+    const iconImg = new Image(100, 100);
     iconImg.src = icon;
     iconNode.appendChild(iconImg);
+
     tempNode.textContent = `${temp}°C`;
     if (feelslike !== temp) {
         feelslikeNode.textContent = `Feels Like: ${feelslike}°C`;
